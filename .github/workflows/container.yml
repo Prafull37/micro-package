@@ -4,15 +4,15 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'packages/container/**'
+      - 'micro-packages/container/**'
   pull_request:
     branches: [ main ]
     paths:
-      - 'packages/container/**'
-      
+      - 'micro-packages/container/**'
+
 defaults:
   run:
-    working-directory: packages/container
+    working-directory: micro-packages/container
 
 jobs:
   build:
