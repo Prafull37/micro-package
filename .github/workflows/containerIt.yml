@@ -8,7 +8,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - '**/container/**'
+      - 'micro-package/container/**'
   pull_request:
     branches: [ main ]
   
