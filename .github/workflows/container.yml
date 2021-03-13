@@ -9,7 +9,7 @@ on:
     branches: [ main ]
     paths:
       - 'container/**'
-  workflow_dispatch:
+ 
 defaults:
   run:
     working-directory: container
