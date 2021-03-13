@@ -4,15 +4,15 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'micro-package/container/**'
+      - 'container/**'
   pull_request:
     branches: [ main ]
     paths:
-      - 'micro-package/container/**'
-
+      - 'container/**'
+  workflow_dispatch:
 defaults:
   run:
-    working-directory: micro-package/container
+    working-directory: container
 
 jobs:
   build:
