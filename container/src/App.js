@@ -1,15 +1,26 @@
-import React from "react";
-import {BrowserRouter} from 'react-router-dom';
-import MarketingApp from "./Composer/MarketingApp";
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import {
+  StylesProvider,
+  createGenerateClassName,
+} from '@material-ui/core/styles';
+
+import MarketingApp from './Composer/MarketingApp';
 import Header from './component/Header';
 
-const App=()=>{
-    return <BrowserRouter>
-            <div>
-                <Header/>
-                <MarketingApp/>
-            </div>
-    </BrowserRouter>
-}
+const generateClassName = createGenerateClassName({
+  productionPrefix: 'co',
+});
 
-export default App;
+export default () => {
+  return (
+    <BrowserRouter>
+      <StylesProvider generateClassName={generateClassName}>
+        <div>
+          <Header />
+          <MarketingApp />
+        </div>
+      </StylesProvider>
+    </BrowserRouter>
+  );
+};
