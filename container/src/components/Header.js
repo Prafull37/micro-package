@@ -60,6 +60,7 @@ export default function Header({ signedIn, onSignOut }) {
   const onClick = () => {
     if (signedIn && onSignOut) {
       onSignOut();
+      
     }
   };
 
